@@ -1,20 +1,19 @@
 
 // 1. Example ----------------------
 
-var Sales = "Toyota";
+const Sales = "Toyota";
 
 function CarTypes(name) {
-  if (name == "Honda") {
+  if (name === "Honda") {
     return name;
   } else {
-    return "Sorry, we don't sell " + name + ".";
+    return `Sorry, we don't sell ${name}.`;
   }
 }
 
-var car = { myCar: "Saturn", getCar: CarTypes("Honda"), special: Sales };
+const car = { myCar: "Saturn", getCar: CarTypes("Honda"), special: Sales };
 
 console.log(car.special);
-
 
 
 
@@ -25,8 +24,7 @@ function Product(name, price) {
   this.price = price;
 
   if (price < 0) {
-    throw RangeError('Cannot create product ' +
-                      this.name + ' with a negative price');
+    throw RangeError(`Cannot create product ${this.name} with a negative price`);
   }
 }
 
@@ -40,14 +38,12 @@ function Toy(name, price) {
   this.category = 'toy';
 }
 
-var cheese = new Food('feta', 5);
-var fun = new Toy('robot', 40);
+const cheese = new Food('feta', 5);
+const fun = new Toy('robot', 40);
 
 
 
-/**
-sample javascript from xui
-*/
+// 3. Sample javascript from xui ----------------------
 
 var undefined,
     xui,
